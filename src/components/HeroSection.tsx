@@ -4,8 +4,19 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-4 pt-16">
-      {/* Glow effect */}
+      {/* Teal glow effect */}
       <div className="pointer-events-none absolute inset-0" style={{ background: "var(--hero-glow)" }} />
+
+      {/* Grid pattern overlay - below the glow */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: `linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+          maskImage: "radial-gradient(ellipse 70% 50% at 50% 60%, black 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 70% 50% at 50% 60%, black 0%, transparent 70%)",
+        }}
+      />
 
       {/* Badge */}
       <div className="mb-8 animate-fade-up flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5">

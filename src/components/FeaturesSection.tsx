@@ -1,51 +1,34 @@
-import { BookOpen, BarChart3, FileText, CheckCircle2 } from "lucide-react";
-
-const features = [
-  {
-    icon: BookOpen,
-    title: "Study Sheets",
-    description: "Curated chapter-wise study materials for Physics, Chemistry, and Mathematics.",
-  },
-  {
-    icon: BarChart3,
-    title: "Progress Tracking",
-    description: "Monitor your completion and revision status across all chapters in real time.",
-  },
-  {
-    icon: FileText,
-    title: "Notes & PYQs",
-    description: "Access detailed notes, short notes, and previous year questions for every chapter.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Revision Planner",
-    description: "Mark chapters as completed and revised to stay on track with your study plan.",
-  },
-];
+import { BookOpen, BarChart3 } from "lucide-react";
 
 const FeaturesSection = () => {
   return (
     <section className="px-4 py-24">
       <div className="container">
-        <div className="mx-auto max-w-2xl text-center">
+        {/* Section Header */}
+        <div className="mb-4 flex items-center justify-center gap-2">
+          <BookOpen className="h-4 w-4 text-primary" />
+          <span className="text-xs font-medium uppercase tracking-wider text-primary">Interactive Learning</span>
+        </div>
+        <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-            Everything you need to <span className="text-gradient">ace CET</span>
+            Master Every Topic with <span className="text-gradient">Data-Driven Sheets</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            A complete toolkit designed to make your CET preparation systematic and effective.
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Our sheets are not just PDFs. They are designed using cognitive learning patterns that help you retain complex information up to 3x faster than traditional methods.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
-          {features.map((feature) => (
-            <div key={feature.title} className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/30">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                <feature.icon className="h-5 w-5 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
-            </div>
-          ))}
+        {/* Stats */}
+        <div className="mx-auto mt-12 flex max-w-md items-center justify-center gap-12">
+          <div className="text-center">
+            <p className="text-4xl font-bold text-foreground">500+</p>
+            <p className="mt-1 text-sm text-muted-foreground">Conceptual Charts</p>
+          </div>
+          <div className="h-10 w-px bg-border" />
+          <div className="text-center">
+            <p className="text-4xl font-bold text-foreground">20k+</p>
+            <p className="mt-1 text-sm text-muted-foreground">Practice Problems</p>
+          </div>
         </div>
       </div>
     </section>
