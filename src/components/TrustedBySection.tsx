@@ -1,20 +1,29 @@
 const institutions = [
   "Vidyalankar", "Allen Group", "Resonance", "Akash Inst.", "Career Point", "Pace IIT",
-  "Vidyalankar", "Allen Group", "Resonance", "Akash Inst.", "Career Point", "Pace IIT",
 ];
 
 const TrustedBySection = () => {
   return (
-    <section className="px-4 py-16 border-t border-border/50">
-      <div className="container">
-        <p className="text-center text-sm text-muted-foreground mb-8">
-          Trusted by <span className="text-foreground font-medium">10,000+</span> Students from top institutions
-        </p>
-        <div className="mask-marquee overflow-hidden">
-          <div className="flex animate-marquee gap-12">
-            {institutions.map((name, i) => (
-              <span key={i} className="whitespace-nowrap text-lg font-semibold text-muted-foreground/40">{name}</span>
-            ))}
+    <section className="py-20 relative overflow-hidden border-t border-white/5">
+      <div className="absolute inset-0 bg-primary/5 pointer-events-none -z-10" />
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="text-center mb-12">
+          <p className="text-muted-foreground text-sm uppercase tracking-widest">
+            Trusted by 10,000+ Students from top institutions
+          </p>
+        </div>
+        <div className="w-full h-[60px] relative overflow-hidden mask-marquee">
+          <div className="animate-marquee flex flex-row items-center gap-[84px] h-full whitespace-nowrap">
+            <div className="flex items-center gap-[84px] flex-shrink-0">
+              {institutions.map((name, i) => (
+                <span key={`a-${i}`} className="text-white/40 text-xl font-medium tracking-tight">{name}</span>
+              ))}
+            </div>
+            <div className="flex items-center gap-[84px] flex-shrink-0">
+              {institutions.map((name, i) => (
+                <span key={`b-${i}`} className="text-white/40 text-xl font-medium tracking-tight">{name}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,28 +1,27 @@
-import { Button } from "@/components/ui/button";
 import { BookOpen } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 glass">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary glow-sm">
-            <BookOpen className="h-4 w-4 text-primary-foreground" />
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 glass-nav">
+      <div className="max-w-[1200px] mx-auto flex h-[72px] items-center justify-between px-6">
+        <div className="flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary" style={{ boxShadow: "0 0 15px rgba(0,195,201,0.4)" }}>
+            <BookOpen className="h-5 w-5 text-white" />
           </div>
-          <span className="text-lg font-semibold text-foreground">Master CET Sheet</span>
+          <span className="text-base font-semibold text-white">Master CET Sheet</span>
         </div>
 
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Home</a>
-          <a href="#progress" className="text-sm text-muted-foreground transition-colors hover:text-primary">Progress</a>
-          <a href="#sheets" className="text-sm text-muted-foreground transition-colors hover:text-primary">Study Sheets</a>
+          <a href="#home" className="text-sm text-muted-foreground transition-colors hover:text-white">Home</a>
+          <a href="#progress" className="text-sm text-muted-foreground transition-colors hover:text-white">Progress</a>
+          <a href="#sheets" className="text-sm text-muted-foreground transition-colors hover:text-white">Study Sheets</a>
         </div>
 
-        <div className="flex items-center gap-3">
-          <span className="hidden text-sm text-muted-foreground hover:text-foreground cursor-pointer transition-colors sm:inline">Login</span>
-          <Button size="sm" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 glow-button transition-all">
+        <div className="flex items-center gap-4">
+          <span className="hidden text-sm text-muted-foreground hover:text-white cursor-pointer transition-colors sm:inline">Login</span>
+          <button className="rounded-lg border border-white/10 bg-white/5 px-6 py-2 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/10">
             Register
-          </Button>
+          </button>
         </div>
       </div>
     </nav>
