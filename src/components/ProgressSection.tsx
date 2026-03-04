@@ -6,8 +6,11 @@ const ProgressSection = () => {
   ];
 
   return (
-    <section className="px-4 py-24">
-      <div className="container">
+    <section id="progress" className="relative px-4 py-24">
+      {/* Background glow */}
+      <div className="pointer-events-none absolute inset-0" style={{ background: "var(--section-glow)" }} />
+
+      <div className="container relative">
         <div className="mx-auto max-w-3xl text-center mb-12">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
             Total Learning Progress
@@ -17,13 +20,13 @@ const ProgressSection = () => {
           </p>
         </div>
 
-        <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-card p-8">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border glass-card p-8">
           {/* Overall progress */}
           <div className="flex items-center gap-8 mb-8">
             <div className="relative flex h-28 w-28 flex-shrink-0 items-center justify-center">
               <svg className="h-28 w-28 -rotate-90" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="42" fill="none" stroke="hsl(var(--border))" strokeWidth="8" />
-                <circle cx="50" cy="50" r="42" fill="none" stroke="hsl(var(--primary))" strokeWidth="8" strokeDasharray={`${60 * 2.64} ${100 * 2.64}`} strokeLinecap="round" />
+                <circle cx="50" cy="50" r="42" fill="none" stroke="hsl(var(--primary))" strokeWidth="8" strokeDasharray={`${60 * 2.64} ${100 * 2.64}`} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 8px hsl(187 94% 43% / 0.4))" }} />
               </svg>
               <span className="absolute text-2xl font-bold text-foreground">60%</span>
             </div>
@@ -45,7 +48,7 @@ const ProgressSection = () => {
                   </div>
                 </div>
                 <div className="h-2 w-full overflow-hidden rounded-full bg-border">
-                  <div className="h-full rounded-full transition-all" style={{ width: `${s.coverage}%`, backgroundColor: s.color }} />
+                  <div className="h-full rounded-full transition-all" style={{ width: `${s.coverage}%`, backgroundColor: s.color, boxShadow: `0 0 10px ${s.color}40` }} />
                 </div>
               </div>
             ))}

@@ -30,8 +30,8 @@ const sheets = [
 
 const StudySheetsSection = () => {
   return (
-    <section id="sheets" className="px-4 py-24">
-      <div className="container">
+    <section id="sheets" className="relative px-4 py-24">
+      <div className="container relative">
         <div className="mx-auto max-w-3xl text-center mb-12">
           <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
             📚 Study Sheets
@@ -43,9 +43,9 @@ const StudySheetsSection = () => {
 
         <div className="mx-auto max-w-5xl grid grid-cols-1 gap-6 md:grid-cols-3">
           {sheets.map((sheet) => (
-            <div key={sheet.subject} className="group rounded-2xl border border-border bg-card overflow-hidden transition-colors hover:border-primary/30">
-              <div className="aspect-[4/3] overflow-hidden bg-secondary/50 flex items-center justify-center p-4">
-                <img src={sheet.image} alt={`${sheet.subject} Master Sheet`} className="h-full w-full object-contain" loading="lazy" />
+            <div key={sheet.subject} className="group rounded-2xl border border-border glass-card overflow-hidden transition-all hover:border-primary/30 hover:glow-sm">
+              <div className="aspect-[4/3] overflow-hidden bg-muted/20 flex items-center justify-center p-4">
+                <img src={sheet.image} alt={`${sheet.subject} Master Sheet`} className="h-full w-full object-contain transition-transform group-hover:scale-105" loading="lazy" />
               </div>
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-2">
