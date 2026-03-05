@@ -5,7 +5,7 @@ const institutions = [
 const TrustedBySection = () => {
   return (
     <section className="py-20 relative overflow-hidden border-t border-white/5">
-      <div className="absolute inset-0 bg-primary/5 pointer-events-none -z-10" />
+      
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-muted-foreground text-sm uppercase tracking-widest">

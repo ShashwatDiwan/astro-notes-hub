@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { CTAButton } from "./common/CTAButton";
 
 const HeroSection = () => {
   return (
@@ -31,22 +31,18 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <a
+            <CTAButton
               href="#sheets"
-              className="group relative flex items-center justify-center bg-white rounded-lg px-10 h-[52px] overflow-hidden no-underline transition-all duration-200 hover:bg-neutral-100 legacy-typography"
-              style={{ boxShadow: "0 0 30px rgba(255,255,255,0.15)" }}
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-black font-medium whitespace-nowrap">View Study Sheets</span>
-                <ArrowRight className="w-4 h-4 text-black" />
-              </div>
-            </a>
-            <a
+              label="View Study Sheets"
+              variant="primary"
+              showArrow={true}
+            />
+            <CTAButton
               href="#progress"
-              className="flex items-center justify-center border border-white/10 hover:border-white/30 bg-white/5 rounded-lg px-10 h-[52px] text-white font-medium transition-colors legacy-typography"
-            >
-              Track My Progress
-            </a>
+              label="Track My Progress"
+              variant="secondary"
+              showArrow={false}
+            />
           </div>
         </div>
       </div>

@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     /* Core palette matching reference */
     --background: 222 47% 3%;       /* #020617 deep navy */
