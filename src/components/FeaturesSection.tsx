@@ -13,7 +13,7 @@ const FeaturesSection = () => {
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 text-primary font-semibold tracking-widest text-xs uppercase">
             <span className="w-8 h-px bg-primary" />
-            Interactive Learning
+            Why us? 
           </div>
           <h2 className="text-4xl lg:text-5xl font-medium text-white leading-tight">
             Master Every Topic with <span className="text-primary">Data-Driven</span> Sheets
@@ -23,11 +23,11 @@ const FeaturesSection = () => {
           </p>
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-white">500+</div>
-              <p className="text-sm text-muted-foreground">Conceptual Charts</p>
+              <div className="text-3xl font-bold text-white">50+</div>
+              <p className="text-sm text-muted-foreground">Short Notes</p>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-white">20k+</div>
+              <div className="text-3xl font-bold text-white">80+</div>
               <p className="text-sm text-muted-foreground">Practice Problems</p>
             </div>
           </div>
