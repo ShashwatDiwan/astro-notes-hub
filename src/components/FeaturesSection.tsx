@@ -32,10 +32,10 @@ const FeaturesSection = () => {
 
         {/* Right image */}
         <div className="relative">
-          <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-3xl -z-10" />
+          <div className="absolute -inset-4 bg-primary/15 blur-3xl rounded-3xl -z-10" />
           <img
             src={dashboardImage}
-            alt="CET Sheets Visualization"
+            alt="Product"
             className="w-full h-auto rounded-3xl border border-white/10 shadow-2xl"
             loading="lazy"
           />

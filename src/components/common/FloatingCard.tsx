@@ -18,11 +18,12 @@ export const FloatingCard: React.FC<FloatingCardProps> = ({
 }) => {
   return (
     <div
-      className={`relative rounded-3xl border border-white/10 overflow-hidden ${className}`}
-      style={{
-        background: 'linear-gradient(90deg, #0d0d0f 0%, #0c0c0e 100%)',
-      }}
-    >
+  className={`relative rounded-3xl border border-white/5 overflow-hidden ${className}`}
+  style={{
+    background: 'linear-gradient(90deg, #060607 0%, #0a0a0b 100%)',
+    boxShadow: 'inset 0 0 40px rgba(0,0,0,0.7)'
+  }}
+>
       {showTopHighlight && (
         <div
           className="w-2/5 h-[2px]"
